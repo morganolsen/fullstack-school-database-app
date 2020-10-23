@@ -1,7 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Courses(props) {
+/**
+ * Creates a course "box" to show in the courses list.
+ * 
+ * @param {object} props 
+ */
+export default function Course(props) {
     const {id,title} = props; 
     return(
         <div className="grid-33">

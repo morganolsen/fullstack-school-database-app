@@ -1,5 +1,8 @@
 import React from 'react';
 
+/**
+ * Creates the forbidden view.
+ */
 export default function Forbidden() {
     return(
         <div className="bounds">
