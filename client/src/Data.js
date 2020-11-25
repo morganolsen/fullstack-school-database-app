@@ -158,7 +158,7 @@ export async function registerUser(body){
  */
 export async function getUser(emailAddress, password){
     const response = await api("/users", "GET", null, true, {emailAddress, password});
-    console.log({emailAddress, password});
+    
     if(response.status === 200){
         return response.json().then(data => data);
     }else if(response.status === 401){

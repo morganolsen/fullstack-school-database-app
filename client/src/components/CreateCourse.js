@@ -8,7 +8,7 @@ import { createCourse } from '../Data';
  * 
  * @param {object} props 
  */
-export default function UserSignIn(props) {
+export default function CreateCourse(props) {
 
     const [errors, setErrors] = useState([]);
     const fields = {
