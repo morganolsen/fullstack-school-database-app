@@ -22,7 +22,10 @@ export class Provider extends Component {
     signIn = async (emailAddress, password) => {
         const user = await getUser(emailAddress, password);
         if(user !== null){
-            this.setState({ currentUser: user });
+            const userToState = user;
+            // Encoding the password before saving it to state.
+            userToState.password = btoa(password);
+            this.setState({ currentUser: userToState });
             Cookies.set('authenticated', JSON.stringify(user), {expires:1});
             // Instead of storing the password in plaintext, I'm storing the authorization string.
             // It's not any more secure than storing the password in plaintext but to a non-savvy user
