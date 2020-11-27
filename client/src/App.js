@@ -31,7 +31,7 @@ function App() {
         <PrivateRoute path="/courses/:id/update" component={withContext(UpdateCourse)} />
         <Route exact path="/courses/:id" component={withContext(CourseDetail)} />
         <Route path="/signin" component={withContext(UserSignIn)} />
-        <Route path="/signup" component={UserSignUp} />
+        <Route path="/signup" component={withContext(UserSignUp)} />
         <Route path="/signout" component={withContext(UserSignOut)} />
         <Route component={NotFound} />
       </Switch>

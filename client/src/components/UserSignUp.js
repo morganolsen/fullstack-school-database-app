@@ -56,6 +56,8 @@ export default function UserSignUp(props) {
             }
             const user = await registerUser(body);
             if(user === 201){
+                // As the user was registered successfully, let's sign them in.
+                await props.context.actions.signIn(emailAddress, password);
                 props.history.push('/');
             }else if(user === 500){
                 props.history.push('/error');
