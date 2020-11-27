@@ -11,6 +11,7 @@ function Form(props) {
     const{
         errors,
         submit,
+        cancel,
         submitButtonText,
         elements
     } = props;
@@ -22,7 +23,12 @@ function Form(props) {
 
     function handleCancel(event) {
         event.preventDefault();
-        props.history.push('/');
+        if(!cancel){
+            props.history.push('/');
+        }else{
+            cancel();
+        }
+        
     }
 
     return(

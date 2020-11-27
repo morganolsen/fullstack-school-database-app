@@ -56,6 +56,10 @@ export default function UpdateCourse(props) {
         }
     }
 
+    function cancel(){
+        props.history.push('/courses/' + props.match.params.id);
+    }
+
     if(isLoading){
         return(<Loading />);
     }
@@ -75,6 +79,7 @@ export default function UpdateCourse(props) {
                     submit={submit}
                     errors={errors}
                     submitButtonText="Update Course"
+                    cancel={cancel}
                     elements={() => (
                         <React.Fragment>
                             <div className="grid-66">
