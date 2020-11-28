@@ -38,7 +38,6 @@ export default function UpdateCourse(props) {
      * Calls updateCourse to send the request to the API.
      */
     async function submit(){
-        console.log("hello");
         const body = {
             title: fields.title.current.value,
             description: fields.description.current.value,
